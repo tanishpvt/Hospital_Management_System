@@ -1,0 +1,44 @@
+-- Create Employee Table
+CREATE TABLE Employee (
+    Patient_Id NUMBER,
+    Patient_Name VARCHAR2(100),
+    Room_Number NUMBER,
+    Doctor_Id NUMBER,
+    Doctor_Name VARCHAR2(100),
+    Age NUMBER,
+    Gender VARCHAR2(10),
+    Weight NUMBER,
+    Height NUMBER,
+    Blood_Group VARCHAR2(10),
+    Address VARCHAR2(200),
+    Contact_No VARCHAR2(20),
+    Bill NUMBER
+);
+
+-- Insert Demo Records
+INSERT INTO Employee VALUES (1, 'John Doe', 101, 101, 'Dr. Smith', 45, 'Male', 70, 1.75, 'A+', '123 Main St', '1234567890', 150);
+INSERT INTO Employee VALUES (2, 'Jane Smith', 102, 102, 'Dr. Johnson', 55, 'Female', 65, 1.6, 'B-', '456 Elm St', '9876543210', 200);
+INSERT INTO Employee VALUES (3, 'Alice Jones', 103, 103, 'Dr. Brown', 70, 'Female', 60, 1.7, 'O+', '789 Oak St', '5678901234', 250);
+INSERT INTO Employee VALUES (4, 'Bob Brown', 104, 104, 'Dr. Lee', 65, 'Male', 80, 1.8, 'AB-', '321 Pine St', '2345678901', 300);
+-- Insert more demo records...
+
+-- Calculate BMI for all patients
+DECLARE
+    v_bmi NUMBER;
+BEGIN
+    FOR rec IN (SELECT Patient_Id, Weight, Height FROM Employee) LOOP
+        v_bmi := rec.Weight / (rec.Height * rec.Height);
+        DBMS_OUTPUT.PUT_LINE('BMI for Patient ' || rec.Patient_Id || ': ' || v_bmi);
+    END LOOP;
+END;
+/
+
+-- Update Bill for senior citizens
+UPDATE Employee
+SET Bill = Bill * 0.98
+WHERE Age >= 60;
+
+-- Display Patients with updated bill
+SELECT Patient_Id, Patient_Name, Bill AS New_Bill
+FROM Employee
+WHERE Age >= 60;

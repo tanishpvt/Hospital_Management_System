@@ -1,0 +1,83 @@
+CREATE TABLE Patients (
+    PatientId INT AUTO_INCREMENT PRIMARY KEY,
+    PatientName VARCHAR(100),
+    RoomNumber VARCHAR(10),
+    DoctorId INT,
+    DoctorName VARCHAR(100),
+    Age INT,
+    Gender VARCHAR(10),
+    Weight DECIMAL(5,2),
+    Height DECIMAL(5,2),
+    BloodGroup VARCHAR(5),
+    Address VARCHAR(255),
+    ContactNo VARCHAR(15)
+);
+
+
+
+
+INSERT INTO Patients (PatientId, PatientName, RoomNumber, DoctorId, DoctorName, Age, Gender, Weight, Height, BloodGroup, Address, ContactNo) VALUES
+(1001, 'Raj Patel', '201', 3, 'Dr. Gupta', 45, 'Male', 75.0, 180.0, 'B+', '123 Main St, Delhi', '+91-1234567890'),
+(1002, 'Priya Sharma', '202', 4, 'Dr. Khan', 32, 'Female', 55.5, 165.0, 'A-', '456 Park St, Mumbai', '+91-9876543210'),
+(1003, 'Amit Singh', '203', 5, 'Dr. Reddy', 28, 'Male', 68.2, 172.0, 'O+', '789 Lake Rd, Bangalore', '+91-7890123456'),
+(1004, 'Anjali Desai', '204', 6, 'Dr. Patel', 35, 'Female', 60.0, 160.0, 'AB-', '456 Hill St, Kolkata', '+91-6543210987'),
+(1005, 'Manish Verma', '205', 7, 'Dr. Sharma', 40, 'Male', 80.5, 175.0, 'B-', '321 River Rd, Chennai', '+91-3210987654'),
+(1006, 'Neha Gupta', '206', 8, 'Dr. Verma', 25, 'Female', 52.3, 158.0, 'A+', '654 Garden St, Hyderabad', '+91-8765432109'),
+(1007, 'Sandeep Yadav', '207', 9, 'Dr. Singh', 38, 'Male', 70.0, 170.0, 'O-', '987 Forest Rd, Pune', '+91-2109876543'),
+(1008, 'Pooja Das', '208', 10, 'Dr. Das', 30, 'Female', 58.5, 163.0, 'AB+', '234 Beach Rd, Goa', '+91-7654321098'),
+(1009, 'Rahul Malhotra', '209', 11, 'Dr. Malhotra', 42, 'Male', 82.0, 178.0, 'B+', '543 Hilltop Rd, Jaipur', '+91-5432109876'),
+(1010, 'Kavita Tiwari', '210', 12, 'Dr. Tiwari', 36, 'Female', 63.7, 167.0, 'A-', '876 Valley Rd, Lucknow', '+91-4321098765');
+
+
+SELECT * FROM Patients;
+
+
+
+UPDATE Patients
+SET 
+    PatientName = 'Anjali Desai',
+    Age = 42
+WHERE PatientId = 1004;
+
+
+
+
+
+
+
+
+
+
+
+
+User Story 1 (US001):
+Feature: Patient Registration - DB
+Description: "As an Admin desk executive, I want to be able to capture patients' personal data in the database."
+Acceptance Criteria:
+
+Create a patient table with the following attributes (columns):
+Patient Id
+Patient Name
+Room Number
+Doctor Id (doctor assigned to the patient)
+Doctor Name
+Age
+Gender
+Weight
+Height
+Blood Group
+Address
+Contact No
+After successful creation of the table, insert a minimum of 10 demo records.
+User Story 2 (US002):
+Feature: Patient Details Management-DB
+Description: "As an Admin desk executive, I want to view patient information."
+Acceptance Criteria:
+
+After successful insertion of patient records, the Admin desk executive should be able to view patient details.
+User Story 3 (US003):
+Feature: Patient Details Management-DB
+Description: "As an Admin desk executive, I want to update patient information."
+Acceptance Criteria:
+
+After successful insertion of patient records, the Admin desk executive should be able to update patient details.
