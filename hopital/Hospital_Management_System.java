@@ -3,123 +3,6 @@ package hopital;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-//creating  class and parameterized constructor
-class Patient {
-	private int pId;
-	private String firstName;
-	private String lastName;
-	private String emailId;
-	private long mobileNo;
-	private String gender;
-	private String city;
-	private String doctorId;
-	private String doctorName;
-	private String address;
-	private long contactNo;
-	
-	//creating parameterized constructor
-	
-	public Patient(int pId,String firstName, String lastName, String emailId, long mobileNo, String gender, String city,
-			String doctorId, String doctorName, String address, long contactNo) {
-		this.pId = pId;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.emailId = emailId;
-		this.mobileNo = mobileNo;
-		this.gender = gender;
-		this.city = city;
-		this.doctorId = doctorId;
-		this.doctorName = doctorName;
-		this.address = address;
-		this.contactNo = contactNo;
-	}
-	// creating getter setter and to get and set the value
-	
-	public int getpId() {
-		return pId;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public String getEmailId() {
-		return emailId;
-	}
-
-	public void setEmailId(String emailId) {
-		this.emailId = emailId;
-	}
-
-	public long getMobileNo() {
-		return mobileNo;
-	}
-
-	public void setMobileNo(long mobileNo) {
-		this.mobileNo = mobileNo;
-	}
-
-	public String getGender() {
-		return gender;
-	}
-
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
-
-	public String getCity() {
-		return city;
-	}
-
-	public void setCity(String city) {
-		this.city = city;
-	}
-
-	public String getDoctorId() {
-		return doctorId;
-	}
-
-	public void setDoctorId(String doctorId) {
-		this.doctorId = doctorId;
-	}
-
-	public String getDoctorName() {
-		return doctorName;
-	}
-
-	public void setDoctorName(String doctorName) {
-		this.doctorName = doctorName;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public long getContactNo() {
-		return contactNo;
-	}
-
-	public void setContactNo(long contactNo) {
-		this.contactNo = contactNo;
-	}
-	
-}
 
 
 // created main method
@@ -335,3 +218,122 @@ public class Hospital_Management_System {
 	}
 
 }
+
+//creating  class and parameterized constructor
+class Patient {
+	private int pId;
+	private String firstName;
+	private String lastName;
+	private String emailId;
+	private long mobileNo;
+	private String gender;
+	private String city;
+	private String doctorId;
+	private String doctorName;
+	private String address;
+	private long contactNo;
+	
+	//creating parameterized constructor
+	
+	public Patient(int pId,String firstName, String lastName, String emailId, long mobileNo, String gender, String city,
+			String doctorId, String doctorName, String address, long contactNo) {
+		this.pId = pId;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.emailId = emailId;
+		this.mobileNo = mobileNo;
+		this.gender = gender;
+		this.city = city;
+		this.doctorId = doctorId;
+		this.doctorName = doctorName;
+		this.address = address;
+		this.contactNo = contactNo;
+	}
+	// creating getter setter and to get and set the value
+	
+	public int getpId() {
+		return pId;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getEmailId() {
+		return emailId;
+	}
+
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
+	}
+
+	public long getMobileNo() {
+		return mobileNo;
+	}
+
+	public void setMobileNo(long mobileNo) {
+		this.mobileNo = mobileNo;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getDoctorId() {
+		return doctorId;
+	}
+
+	public void setDoctorId(String doctorId) {
+		this.doctorId = doctorId;
+	}
+
+	public String getDoctorName() {
+		return doctorName;
+	}
+
+	public void setDoctorName(String doctorName) {
+		this.doctorName = doctorName;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public long getContactNo() {
+		return contactNo;
+	}
+
+	public void setContactNo(long contactNo) {
+		this.contactNo = contactNo;
+	}
+	
+}
+
